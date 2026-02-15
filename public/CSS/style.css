@@ -1,0 +1,20 @@
+:root {
+  --PrimerColor: #8e7640;
+  --SegundoColor: #656239;
+  --TercerColor: #612024;
+  --FondoBlanco: #ffffff;
+  --FondoNegro: #000000;
+  --TextoOscuro: #000000;
+  --TextoClaro: #ffffff;
+}
+html,
+body {
+  height: 95%;
+  margin: 0;
+  background: linear-gradient(to right, #656239, #8e7640);
+  /*background-color: var(--PrimerColor);
+  background-image: url("imagen.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;*/
+}

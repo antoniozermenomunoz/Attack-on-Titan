@@ -1,0 +1,50 @@
+/* Contenedor Principal del Header */
+.aot-header {
+  background-color: var(--FondoBlanco);
+  border-bottom: 5px solid var(--TercerColor) !important;
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
+}
+
+/* Título y Logo */
+.aot-logo {
+  border: 2px solid var(--PrimerColor);
+  box-shadow: 3px 3px 0px var(--FondoNegro);
+  object-fit: cover;
+}
+
+.aot-title {
+  color: var(--TextoOscuro);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Georgia", serif; /* Un toque más clásico/militar */
+}
+
+.aot-subtitle {
+  color: var(--SegundoColor);
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+/* Navegación */
+.aot-nav-link {
+  color: var(--PrimerColor) !important;
+  border: 2px solid var(--PrimerColor) !important;
+  border-radius: 0px !important; /* Bordes rectos tipo militar */
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+}
+
+.aot-nav-link:hover {
+  background-color: rgba(142, 118, 64, 0.1);
+}
+
+/* Clase activa de NavLink */
+.aot-nav-link.active {
+  background-color: var(--SegundoColor) !important;
+  border-color: var(--SegundoColor) !important;
+  color: var(--TextoClaro) !important;
+  box-shadow: 2px 2px 0px var(--FondoNegro);
+}
