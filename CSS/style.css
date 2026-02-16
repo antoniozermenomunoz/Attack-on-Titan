@@ -1,0 +1,18 @@
+:root {
+  --PrimerColor: #8e7640;
+  --SegundoColor: #656239;
+  --TercerColor: #612024;
+  --FondoBlanco: #ffffff;
+  --FondoNegro: #000000;
+  --TextoOscuro: #000000;
+  --TextoClaro: #ffffff;
+}
+html,
+body {
+  background-color: #f4f1ea;
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+  background-attachment: fixed;
+  border: 1vh solid var(--TercerColor);
+  min-height: 98vh;
+  margin: 0;
+}
