@@ -1,50 +1,106 @@
-/* Contenedor Principal del Header */
-.aot-header {
+/* HEADER PRINCIPAL */
+.aot-header-main {
   background-color: var(--FondoBlanco);
-  border-bottom: 5px solid var(--TercerColor) !important;
-  border-radius: 4px;
-  padding: 1rem 1.5rem;
+  border-bottom: 6px solid var(--TercerColor);
+  padding: 1rem 0;
+  position: relative;
+  /* Línea decorativa superior */
+  border-top: 2px solid var(--PrimerColor);
 }
 
-/* Título y Logo */
-.aot-logo {
+/* MARCO DEL LOGO */
+.aot-brand-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.aot-logo-frame {
+  background: var(--FondoBlanco);
+  padding: 4px;
   border: 2px solid var(--PrimerColor);
-  box-shadow: 3px 3px 0px var(--FondoNegro);
-  object-fit: cover;
+  outline: 1px solid var(--FondoNegro); /* Doble borde militar */
+  box-shadow: 4px 4px 0px var(--FondoNegro);
 }
 
-.aot-title {
+.aot-logo-img {
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+
+/* TÍTULOS */
+.aot-main-title {
   color: var(--TextoOscuro);
-  letter-spacing: 2px;
+  font-family: "Georgia", serif;
+  font-weight: 900;
   text-transform: uppercase;
-  font-family: "Georgia", serif; /* Un toque más clásico/militar */
+  margin: 0;
+  font-size: 1.5rem;
+  letter-spacing: -1px;
 }
 
-.aot-subtitle {
+.aot-tagline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   color: var(--SegundoColor);
-  font-size: 0.75rem;
-  letter-spacing: 1px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
-/* Navegación */
+.aot-tagline .line {
+  height: 2px;
+  flex-grow: 1;
+  background-color: var(--PrimerColor);
+  opacity: 0.5;
+}
+
+/* NAVEGACIÓN - BOTONES DE MISIÓN */
 .aot-nav-link {
   color: var(--PrimerColor) !important;
-  border: 2px solid var(--PrimerColor) !important;
-  border-radius: 0px !important; /* Bordes rectos tipo militar */
-  font-weight: bold;
+  border: 1px solid rgba(142, 118, 64, 0.3) !important;
+  border-radius: 0 !important;
+  font-weight: 700 !important;
   text-transform: uppercase;
-  transition: all 0.3s ease;
-  margin: 0 5px;
+  font-size: 0.85rem;
+  padding: 8px 20px !important;
+  margin: 0 4px;
+  background: transparent;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* HOVER DINÁMICO */
 .aot-nav-link:hover {
-  background-color: rgba(142, 118, 64, 0.1);
+  background-color: var(--FondoNegro) !important;
+  color: var(--TextoClaro) !important;
+  border-color: var(--FondoNegro) !important;
+  transform: skewX(-10deg); /* Inclinación dinámica */
 }
 
-/* Clase activa de NavLink */
+.aot-nav-link .link-text {
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.aot-nav-link:hover .link-text {
+  transform: skewX(10deg); /* Corrige la inclinación del texto */
+}
+
+/* ESTADO ACTIVO */
 .aot-nav-link.active {
-  background-color: var(--SegundoColor) !important;
-  border-color: var(--SegundoColor) !important;
+  background-color: var(--TercerColor) !important;
+  border-color: var(--TercerColor) !important;
   color: var(--TextoClaro) !important;
-  box-shadow: 2px 2px 0px var(--FondoNegro);
+  box-shadow: 4px 4px 0px var(--PrimerColor);
+}
+
+.aot-nav-link.active::after {
+  content: "▼";
+  position: absolute;
+  bottom: -15px;
+  left: 45%;
+  color: var(--TercerColor);
+  font-size: 10px;
 }

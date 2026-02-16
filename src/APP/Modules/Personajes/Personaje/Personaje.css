@@ -1,0 +1,84 @@
+/* Overlay del Modal */
+.aot-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  padding: 20px;
+}
+
+/* Tarjeta del Personaje */
+.aot-character-card {
+  max-width: 800px;
+  width: 100%;
+  border: none;
+  border-radius: 4px; /* Estilo militar, poco redondeo */
+  overflow: hidden;
+  background-color: var(--FondoBlanco);
+  border-right: 8px solid var(--TercerColor); /* Acento rojo sangre */
+}
+
+/* Imagen estilo "Retrato de Informe" */
+.aot-img-container {
+  background-color: var(--FondoNegro);
+  display: flex;
+  align-items: center;
+}
+
+.aot-character-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(0.2) contrast(1.1); /* Efecto antiguo */
+}
+
+/* Tipografía y Detalles */
+.aot-character-name {
+  color: var(--TextoOscuro);
+  font-family: "Georgia", serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--PrimerColor);
+}
+
+.aot-divider {
+  height: 3px;
+  background-color: var(--PrimerColor);
+  width: 50px;
+}
+
+.aot-badge {
+  background-color: var(--PrimerColor) !important;
+  color: var(--TextoClaro);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  padding: 5px 8px;
+  border-radius: 0;
+}
+
+/* Botones */
+.aot-btn-primary {
+  background-color: var(--SegundoColor) !important;
+  color: var(--TextoClaro) !important;
+  border: none;
+  border-radius: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.aot-btn-primary:hover {
+  filter: brightness(1.2);
+}
+
+.aot-btn-close {
+  background-color: var(--PrimerColor);
+  opacity: 1;
+  padding: 10px;
+  border-radius: 0;
+}

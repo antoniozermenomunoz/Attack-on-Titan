@@ -9,12 +9,10 @@
 }
 html,
 body {
-  height: 95%;
+  background-color: #f4f1ea;
+  background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
+  background-attachment: fixed;
+  border: 1vh solid var(--TercerColor);
+  min-height: 98vh;
   margin: 0;
-  background: linear-gradient(to right, #656239, #8e7640);
-  /*background-color: var(--PrimerColor);
-  background-image: url("imagen.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;*/
 }

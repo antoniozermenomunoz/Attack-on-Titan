@@ -1,0 +1,96 @@
+/* Pantalla completa bloqueada */
+.aot-loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* Fondo negro profundo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(5px); /* Desenfoque de fondo */
+}
+
+/* Contenedor del Spinner */
+.aot-spinner-container {
+  position: relative;
+  display: inline-block;
+}
+
+.aot-loader-logo {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 0 10px var(--PrimerColor));
+}
+
+/* Efecto de Pulso (Energía de Titán) */
+.aot-pulse-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--TercerColor); /* Rojo Sangre */
+  animation: aot-pulse 1.5s infinite ease-out;
+}
+
+@keyframes aot-pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+/* Texto de Carga */
+.aot-loader-text {
+  color: var(--TextoClaro);
+  font-family: "Georgia", serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 900;
+  margin-top: 20px;
+}
+
+.aot-loader-subtext {
+  color: var(--PrimerColor);
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+/* Barra de progreso infinita */
+.aot-progress-bar-container {
+  width: 250px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 15px auto;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.aot-progress-bar-fill {
+  width: 40%;
+  height: 100%;
+  background-color: var(--SegundoColor); /* Verde Legión */
+  animation: aot-loading-bar 1.2s infinite linear;
+}
+
+@keyframes aot-loading-bar {
+  0% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(250%);
+  }
+}

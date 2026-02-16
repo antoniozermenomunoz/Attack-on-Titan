@@ -11,34 +11,44 @@ function Menu() {
     to: "/Personajes",
     text: "Personajes",
   });
+  routes.push({
+    to: "/Titanes",
+    text: "Titanes",
+  });
   return (
-    <div className="container mt-4">
-      <header className="d-flex flex-wrap justify-content-center justify-content-md-between align-items-center shadow-lg aot-header">
-        <div className="d-flex align-items-center mb-3 mb-md-0 me-md-auto">
-          <picture className="me-3">
-            <img
-              src="/public/IMG/Logo.png"
-              alt="Logo"
-              width="55"
-              height="55"
-              className="aot-logo"
-            />
-          </picture>
-          <div>
-            <h1 className="h4 mb-0 fw-bold aot-title">Attack on Titan</h1>
+    <div className="container-fluid px-0">
+      {" "}
+      {/* Fluido para ocupar todo el ancho si deseas */}
+      <header className="aot-header-main shadow-lg">
+        <div className="container d-flex flex-wrap justify-content-between align-items-center">
+          {/* SECCIÓN DE LA INSIGNIA */}
+          <div className="aot-brand-wrapper">
+            <div className="aot-logo-frame">
+              <img
+                src="/public/IMG/Logo.png"
+                alt="Logo"
+                className="aot-logo-img"
+              />
+            </div>
+            <div className="ms-3">
+              <h1 className="aot-main-title">Attack on Titan</h1>
+              <div className="aot-tagline"></div>
+            </div>
           </div>
+
+          {/* NAVEGACIÓN TÁCTICA */}
+          <nav className="aot-nav-container">
+            <ul className="nav nav-pills">
+              {routes.map((route) => (
+                <li className="nav-item" key={route.to}>
+                  <NavLink to={route.to} className="nav-link aot-nav-link">
+                    <span className="link-text">{route.text}</span>
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
-        <nav className="navbar navbar-expand p-0">
-          <ul className="nav nav-pills">
-            {routes.map((route) => (
-              <li className="nav-item" key={route.to}>
-                <NavLink to={route.to} className="nav-link aot-nav-link">
-                  {route.text}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
-        </nav>
       </header>
     </div>
   );

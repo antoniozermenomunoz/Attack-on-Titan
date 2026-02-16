@@ -1,0 +1,71 @@
+/* Tarjeta General */
+.titan-card {
+  border: 4px solid var(--FondoNegro);
+  border-radius: 0; /* Estética rústica */
+  background-color: var(--FondoBlanco);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+}
+
+.titan-card:hover {
+  transform: scale(1.03);
+  border-color: var(--TercerColor); /* Rojo Sangre al seleccionar */
+  box-shadow: 0 15px 30px rgba(97, 32, 36, 0.4) !important;
+}
+
+/* Contenedor de Imagen */
+.titan-img-container {
+  position: relative;
+  height: 350px;
+  overflow: hidden;
+  background-color: var(--FondoNegro);
+}
+
+.titan-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: sepia(0.3) contrast(1.2);
+  transition: filter 0.5s ease;
+}
+
+.titan-card:hover .titan-img {
+  filter: sepia(0) contrast(1);
+}
+
+/* Cuerpo de la Tarjeta */
+.titan-card-body {
+  padding: 1.5rem;
+  text-align: center;
+  background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+}
+
+.titan-name {
+  font-family: "Georgia", serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--TextoOscuro);
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.titan-deco-line {
+  height: 4px;
+  width: 40px;
+  background-color: var(--TercerColor);
+  margin: 10px auto 0;
+  transition: width 0.3s ease;
+}
+
+.titan-card:hover .titan-deco-line {
+  width: 80%;
+}
+
+/* Estado Vacío */
+.aot-alert-empty {
+  background-color: rgba(142, 118, 64, 0.1);
+  border: 2px dashed var(--PrimerColor);
+  color: var(--PrimerColor);
+  padding: 3rem;
+  border-radius: 0;
+}

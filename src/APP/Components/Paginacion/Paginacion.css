@@ -1,0 +1,21 @@
+/* Paginación */
+.aot-btn-outline {
+  border: 2px solid var(--PrimerColor);
+  color: var(--PrimerColor);
+  font-weight: bold;
+  border-radius: 0;
+  text-transform: uppercase;
+}
+
+.aot-btn-outline:hover {
+  background-color: var(--PrimerColor);
+  color: white;
+}
+
+.aot-page-indicator {
+  background-color: var(--SegundoColor);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 6px 20px;
+  font-size: 0.9rem;
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+}

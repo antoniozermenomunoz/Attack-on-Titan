@@ -1,0 +1,56 @@
+/* Contenedor para ocupar espacio y centrar */
+.aot-empty-container {
+  min-height: 400px; /* Asegura que el mensaje no quede pegado arriba */
+  width: 100%;
+}
+
+/* Estilo del mensaje vacío (Muralla) */
+.aot-alert-empty {
+  background-color: var(--FondoBlanco) !important;
+  border: 3px double var(--PrimerColor) !important; /* Doble borde estilo militar */
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Línea decorativa central */
+.aot-divider-center {
+  height: 2px;
+  width: 60px;
+  background-color: var(--TercerColor);
+  margin: 0 auto;
+}
+
+/* Animación sutil para el icono de la campana */
+.aot-icon-shake {
+  display: inline-block;
+  animation: aot-ring 4s infinite ease-in-out;
+}
+
+@keyframes aot-ring {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  10%,
+  30%,
+  50% {
+    transform: rotate(10deg);
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotate(-10deg);
+  }
+  65% {
+    transform: rotate(0);
+  }
+}
+
+/* Letra del título en el mensaje */
+.aot-alert-empty .aot-title {
+  color: var(--TextoOscuro);
+  font-family: "Georgia", serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}

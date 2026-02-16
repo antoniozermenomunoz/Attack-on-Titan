@@ -1,0 +1,31 @@
+.aot-main-title {
+  color: var(--TextoOscuro);
+  font-family: "Georgia", serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  position: relative;
+  display: inline-block;
+}
+
+.aot-main-title::after {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 4px;
+  background-color: var(--TercerColor);
+}
+
+.aot-content-board::before {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  background: var(--FondoBlanco);
+  border: 2px solid var(--PrimerColor);
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.aot-list-wrapper {
+  margin-top: 20px;
+}
