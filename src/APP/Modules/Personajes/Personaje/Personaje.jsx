@@ -1,14 +1,15 @@
 import { useParams, useNavigate } from "react-router-dom";
 import "./Personaje.css";
+
 import React from "react";
 
 function Personaje() {
+  const { id } = useParams();
   const navigate = useNavigate(); // Herramienta para navegar
   const [character, setCharacter] = React.useState(null);
   const [loading, setLoading] = React.useState(true);
 
-  const URL_character = `https://api.attackontitanapi.com/characters/${useParams()}`;
-
+  const URL_character = `https://api.attackontitanapi.com/characters/${id}`;
   React.useEffect(() => {
     setLoading(true);
     const fetchCharacter = async () => {

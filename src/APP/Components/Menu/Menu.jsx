@@ -1,3 +1,4 @@
+import logo from "../../../../public/IMG/Logo.png";
 import { NavLink } from "react-router-dom";
 import "./Menu.css";
 
@@ -24,11 +25,7 @@ function Menu() {
           {/* SECCIÓN DE LA INSIGNIA */}
           <div className="aot-brand-wrapper">
             <div className="aot-logo-frame">
-              <img
-                src="/public/IMG/Logo.png"
-                alt="Logo"
-                className="aot-logo-img"
-              />
+              <img src={logo} alt="Logo" className="aot-logo-img" />
             </div>
             <div className="ms-3">
               <h1 className="aot-main-title">Attack on Titan</h1>

@@ -1,4 +1,7 @@
+import logo from "../../../../public/IMG/Logo.png";
 import "./MessageLoading.css";
+
+<img src={logo} alt="Logo" className="aot-logo-img" />;
 
 function MessageLoading() {
   return (
@@ -7,11 +10,7 @@ function MessageLoading() {
         {/* Contenedor del ícono con efecto de pulso */}
         <div className="aot-spinner-container mb-4">
           <div className="aot-pulse-ring"></div>
-          <img
-            src="/public/IMG/Logo.png"
-            alt="Cargando..."
-            className="aot-loader-logo"
-          />
+          <img src={logo} alt="Cargando..." className="aot-loader-logo" />
         </div>
 
         {/* Texto de estado militar */}

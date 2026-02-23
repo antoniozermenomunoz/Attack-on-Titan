@@ -3,13 +3,14 @@ import "./Paginacion.css";
 function Paginacion({ page, setPage, totalPages }) {
   return (
     <div className="d-flex justify-content-center align-items-center mt-5 gap-3">
-      <button
-        className="btn aot-btn-outline"
-        disabled={page === 1}
-        onClick={() => setPage((prev) => prev - 1)}
-      >
-        « Anterior
-      </button>
+      {page > 1 && (
+        <button
+          className="btn aot-btn-outline"
+          onClick={() => setPage((prev) => prev - 1)}
+        >
+          « Anterior
+        </button>
+      )}
 
       <div className="aot-page-indicator">
         PÁGINA <span className="fw-bold text-white">{page}</span> DE{" "}
